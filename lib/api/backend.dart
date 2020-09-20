@@ -12,25 +12,37 @@ class Backend {
   Backend();
 
   /// Post
-  Future post({@required url, body, headers}) async {
-    //headers: {kAuthorization: kBearer + credentials.accessToken},
+  Future post({@required url, body, params, headers}) async {
     try {
-      return await http.post("$API_URL/$url", headers: headers, body: body);
+      Uri uri = Uri.https(API_URL, url, params);
+      return await http.post(uri, headers: headers, body: body);
     } catch (error) {
-      String dump = "Backend '/$url' error: ${error.toString()}";
-      print(dump);
+      print("Backend POST '/$url' error: ${error.toString()}");
       return null;
     }
   }
 
-
   /// Get
-  /*Future get({@required url, param, headers}) async {
+  Future get({@required url, params, headers}) async {
+    try {
+      Uri uri = Uri.https(API_URL, url, params);
+      return await http.get(uri, headers: headers);
+    } catch (error) {
+      print("Backend GET '/$url' error: ${error.toString()}");
+      return null;
+    }
+  }
 
-  }*/
-
-  Future<http.Response> test() async => await this.post(
+  Future<http.Response> post_test() async => await post(
         url: "test",
         body: {},
+        params: {},
+        headers: {},
+      );
+
+  Future<http.Response> get_test() async => await get(
+        url: "test",
+        headers: {},
+        params: {},
       );
 }
