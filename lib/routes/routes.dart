@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:getting_start_enguerrand/pages/test.dart';
+import 'package:getting_start_enguerrand/pages/home.dart';
 
 import 'transitions.dart';
 
@@ -12,10 +12,8 @@ class RouteGenerator {
     RouteGenerator route = RouteGenerator(settings.name);
     final dynamic args = settings.arguments ?? {};
     switch (settings.name) {
-      /*case "/login"
-        return LoginPage();*/
       default:
-        return route.normal(Test());
+        return route.normal(Home());
     }
   }
 

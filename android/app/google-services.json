@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "988242039812",
+    "firebase_url": "https://enguerrand-flutter-base-36926.firebaseio.com",
+    "project_id": "enguerrand-flutter-base-36926",
+    "storage_bucket": "enguerrand-flutter-base-36926.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:988242039812:android:10feeee0a5447ecfe85151",
+        "android_client_info": {
+          "package_name": "com.example.getting_start_enguerrand"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "988242039812-7lbj8k7i29o5kbur2jn85ajh13os5pg7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.getting_start_enguerrand",
+            "certificate_hash": "0847a538b45e4442557c0c1d89bfdb926ff242b8"
+          }
+        },
+        {
+          "client_id": "988242039812-lhe27rdmnqekgqio4c5j4hhquka9fdfi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBCwwI7tPS7mBjMLrbjvTO_jr6EepPjv7c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "988242039812-lhe27rdmnqekgqio4c5j4hhquka9fdfi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
