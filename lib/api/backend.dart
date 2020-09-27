@@ -9,8 +9,6 @@ const String kBearer = "Bearer ";
 /// [http.Response] or [null]
 /// Null when exception (connection lost for example, timeout, network changed, ...)
 class Backend {
-  Backend();
-
   /// Post
   Future post({@required url, body, params, headers}) async {
     try {

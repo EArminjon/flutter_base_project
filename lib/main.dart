@@ -17,6 +17,7 @@ Future init() async {
 void main() async {
   runZonedGuarded(() async {
     await init();
+    /// Splash screen appear until runApp is launched
     runApp(App(settings: await loadSettings()));
   }, (error, stackTrace) {
     print('runZonedGuarded: Caught error in my root zone.');
