@@ -60,4 +60,5 @@ In this app, you can see how quickly manage :
 
 ## What is in progress ?
 
-Crashlytics seem not send event to firebase, i'm working on that...
+Crashlytics seem to not send events to firebase, i'm working on that...
+(If you can help me : https://stackoverflow.com/questions/64090701/my-crashlytics-account-on-firebase-didnt-receive-event-is-my-config-right)
