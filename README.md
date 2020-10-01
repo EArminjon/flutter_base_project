@@ -44,7 +44,7 @@ Provide the base tools to develop a flutter app for production
 
 Change the [google-service.json](android/app/google-services.json) by yours.
 
-## 
+##  Features
 
 In this app, you can see how quickly manage :
 
@@ -57,3 +57,9 @@ In this app, you can see how quickly manage :
 - data sharing
 - state management
 - analytics
+
+## What is in progress ?
+
+Crashlytics seem to not send events to firebase, i'm working on that...  
+
+(If you can help me : https://stackoverflow.com/questions/64090701/my-crashlytics-account-on-firebase-didnt-receive-event-is-my-config-right)
