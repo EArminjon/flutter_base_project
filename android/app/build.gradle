@@ -62,6 +62,12 @@ flutter {
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation 'com.android.support:multidex:1.0.3'
+    // Doc say we didn't need following that, but lol we need it else no event send from crashlytics to firebase.
+    // Recommended: Add the Firebase SDK for Google Analytics.
+    implementation 'com.google.firebase:firebase-analytics-ktx:17.5.0'
+
+    // Add the Firebase Crashlytics SDK.
+    implementation 'com.google.firebase:firebase-crashlytics-ktx:17.2.2'
 }
 
 apply plugin: 'com.google.gms.google-services'
