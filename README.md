@@ -1,5 +1,7 @@
 # Flutter base app
 
+https://github.com/EArminjon/flutter_base_project
+
 Provide the base tools to develop a flutter app for production
 
 ## Dependencies
@@ -18,7 +20,7 @@ Provide the base tools to develop a flutter app for production
 
 - **shared_preferences**
  
-  Little storage like for theme preference, locale, settings
+  Little storage for stock theme preference, locale, settings
 
 - **firebase_crashlytics**
 
