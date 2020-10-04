@@ -42,4 +42,4 @@ In this app, you can see how quickly manage :
 
 ## What is in progress ?
 
-I've fixed Crashlytics today <3
+None
