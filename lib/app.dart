@@ -39,7 +39,7 @@ class App extends StatelessWidget {
             Settings settings = BlocProvider.of<AppSettingsBloc>(context).settings;
             return MaterialApp(
               title: APP_NAME,
-              // Assign / to home: Root()
+              // Assign '/' to home: Root()
               initialRoute: "/",
               home: Home(),
               onGenerateRoute: RouteGenerator.generateRoute,

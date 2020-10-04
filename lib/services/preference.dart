@@ -4,7 +4,6 @@ import 'package:flutter/scheduler.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class PreferenceService {
-
   Future setThemeMode(Brightness brightness) async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
     return await prefs.setInt("brightness", brightness.index);

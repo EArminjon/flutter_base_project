@@ -11,51 +11,44 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            RaisedButton(
-              onPressed: () async {
-                await FirebaseCrashlytics.instance.log("I'm a log message");
-                FirebaseCrashlytics.instance.crash();
-              },
-              child: Text("CRASH"),
-            ),
-            RaisedButton(
-              onPressed: () async {
-                final settings = BlocProvider.of<AppSettingsBloc>(context).settings;
-                final bloc = BlocProvider.of<AppSettingsBloc>(context);
+        child: SingleChildScrollView(
+          physics: ClampingScrollPhysics(),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              RaisedButton(
+                onPressed: () async {
+                  await FirebaseCrashlytics.instance.log("I'm a log message");
+                  FirebaseCrashlytics.instance.crash();
+                },
+                child: Text("CRASH"),
+              ),
+              RaisedButton(
+                onPressed: () async {
+                  final settings = BlocProvider.of<AppSettingsBloc>(context).settings;
+                  final bloc = BlocProvider.of<AppSettingsBloc>(context);
 
-                String lang = settings.locale == "en" ? "fr" : "en";
-                Provider.of<FirebaseAnalytics>(context, listen: false).logEvent(name: "Change_language", parameters: {"lang": lang});
-                bloc.doChangeLocale(lang);
-              },
-              child: Text("language".i18n),
-            ),
-            RaisedButton(
-              onPressed: () async {
-                final settings = BlocProvider.of<AppSettingsBloc>(context).settings;
-                final bloc = BlocProvider.of<AppSettingsBloc>(context);
+                  String lang = settings.locale == "en" ? "fr" : "en";
+                  Provider.of<FirebaseAnalytics>(context, listen: false).logEvent(name: "Change_language", parameters: {"lang": lang});
+                  bloc.doChangeLocale(lang);
+                },
+                child: Text("language".i18n),
+              ),
+              RaisedButton(
+                onPressed: () async {
+                  final settings = BlocProvider.of<AppSettingsBloc>(context).settings;
+                  final bloc = BlocProvider.of<AppSettingsBloc>(context);
 
-                Brightness brightness = settings.brightness == Brightness.dark ? Brightness.light : Brightness.dark;
-                Provider.of<FirebaseAnalytics>(context, listen: false).logEvent(name: "Change_theme", parameters: {"brightness": brightness.index});
-                await bloc.doChangeTheme(brightness);
-              },
-              child: Text("theme".i18n),
-            ),
-          ],
+                  Brightness brightness = settings.brightness == Brightness.dark ? Brightness.light : Brightness.dark;
+                  Provider.of<FirebaseAnalytics>(context, listen: false).logEvent(name: "Change_theme", parameters: {"brightness": brightness.index});
+                  await bloc.doChangeTheme(brightness);
+                },
+                child: Text("theme".i18n),
+              ),
+            ],
+          ),
         ),
       ),
     );
   }
-}
-
-class LOl {
-  lol() => RaisedButton(
-        onPressed: () async {
-          await FirebaseCrashlytics.instance.log("I'm a log message");
-          FirebaseCrashlytics.instance.crash();
-        },
-        child: Text("CRASH"),
-      );
 }

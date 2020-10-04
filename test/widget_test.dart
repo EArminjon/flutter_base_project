@@ -1,9 +1,12 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:getting_start_enguerrand/app.dart';
+import 'package:getting_start_enguerrand/init/settings.dart';
+import 'package:getting_start_enguerrand/models/settings.dart';
 
 void main() {
-  testWidgets('Counter increments smoke test', (WidgetTester tester) async {
+  testWidgets('Build app', (WidgetTester tester) async {
     // Build our app and trigger a frame.
-    await tester.pumpWidget(App());
+    Settings settings = await loadSettings();
+    await tester.pumpWidget(App(settings: settings));
   });
 }
