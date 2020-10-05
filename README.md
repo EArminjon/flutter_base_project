@@ -4,6 +4,9 @@ https://github.com/EArminjon/flutter_base_project
 
 Provide the base tools to develop a flutter app for production
 
+/!\ For Android, I setup all requierments for android/
+/!\For IOS, you need to look all packages Readme.md to see what edit in ios/
+
 ## Dependencies
 
 
